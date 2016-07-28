@@ -302,7 +302,7 @@ namespace DotNetKoans.CSharp
 			{
 				result = "dos";
 			}
-			Assert.Equal(FILL_ME_IN, result);
+			Assert.Equal("dos", result);
 		}
 
 		[Koan(28)]
@@ -315,21 +315,21 @@ namespace DotNetKoans.CSharp
 			{
 				result = "is the lonliest number";
 			}
-			Assert.Equal(FILL_ME_IN, result);
+			Assert.Equal("uno", result);
 
 			if (!dictionary.TryGetValue("two", out result))
 			{
 				result = "dos";
 			}
-			Assert.Equal(FILL_ME_IN, result);
+			Assert.Equal("dos", result);
 		}
 		[Koan(29)]
 		public void InitializingADictionary()
 		{
 			//Although it is not common, you can initialize a dictionary...
 			var dictionary = new Dictionary<string, string> { { "one", "uno" }, { "two", "dos" } };
-			Assert.Equal(FILL_ME_IN, dictionary["one"]);
-			Assert.Equal(FILL_ME_IN, dictionary["two"]);
+			Assert.Equal("uno", dictionary["one"]);
+			Assert.Equal("dos", dictionary["two"]);
 		}
 		[Koan(30)]
 		public void ModifyingData()
@@ -338,7 +338,7 @@ namespace DotNetKoans.CSharp
 			dictionary["one"] = "uno";
 			dictionary["two"] = "dos";
 			dictionary["one"] = "ein";
-			Assert.Equal(FILL_ME_IN, dictionary["one"]);
+			Assert.Equal("ein", dictionary["one"]);
 		}
 
 		[Koan(31)]
@@ -358,9 +358,9 @@ namespace DotNetKoans.CSharp
 				one[item.Key] = item.Value;
 			}
 
-			Assert.Equal(FILL_ME_IN, one["jim"]);
-			Assert.Equal(FILL_ME_IN, one["jenny"]);
-			Assert.Equal(FILL_ME_IN, one["amy"]);
+			Assert.Equal(54, one["jim"]);
+			Assert.Equal(26, one["jenny"]);
+			Assert.Equal(20, one["amy"]);
 		}
 	}
 }
